@@ -62,7 +62,7 @@ var extent = require('turf-extent');
  *  ]
  * };
  *
- * var result = turf.dotDensity(input);
+ * var result = turf.dotDensity(input, 'population');
  *
  * //=result
  */
