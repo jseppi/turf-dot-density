@@ -11,7 +11,7 @@ var extent = require('turf-extent');
  *
  * @module turf/dot-density
  * @category interpolation
- * @param {(Feature<Polygon|MultiPolygon>|FeatureCollection<Polygon|MultiPolygon>)} fc input features
+ * @param {(Feature<Polygon>|FeatureCollection<Polygon>)} fc input features, must have Polygon or MultiPolygon geometries
  * @param {String} countProperty the field on which to base the number of points created in each Feature
  * @return {FeatureCollection<Point>} points randomly distributed in each input Feature according to the value of that Feature's countProperty
  * @example

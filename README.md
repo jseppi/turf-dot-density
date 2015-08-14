@@ -11,10 +11,10 @@ given Polygon or MultiPolygon features based on a count property value.
 
 ### Parameters
 
-| parameter       | type                                                                           | description                                                             |
-| --------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
-| `fc`            | Feature\.\<Polygon|MultiPolygon\>\,FeatureCollection\.\<Polygon|MultiPolygon\> | input features                                                          |
-| `countProperty` | String                                                                         | the field on which to base the number of points created in each Feature |
+| parameter       | type                                                 | description                                                             |
+| --------------- | ---------------------------------------------------- | ----------------------------------------------------------------------- |
+| `fc`            | Feature\.\<Polygon\>\,FeatureCollection\.\<Polygon\> | input features, must have Polygon or MultiPolygon geometries            |
+| `countProperty` | String                                               | the field on which to base the number of points created in each Feature |
 
 
 ### Example
