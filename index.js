@@ -85,8 +85,6 @@ module.exports = function dotDensity(fc, countProperty) {
     throw new Error("countProperty must be a string");
   }
 
-  //TODO: make sure it can return 0
-
   var pointsFc = fc.features.reduce(function (acc, feat) {
 
     if (feat.geometry.type !== 'Polygon' && feat.geometry.type !== 'MultiPolygon') {
@@ -125,6 +123,8 @@ function pointsInFeature(feat, numPoints) {
 function pointInFeature(feat) {
   var candidate;
   var bbox = extent(feat);
+  //create a candidate random point in the bbox
+  // and keep doing that until the random point falls inside the feature
   do {
     candidate = random('point', 1, {bbox: bbox}).features[0];
   } while (!inside(candidate, feat));
